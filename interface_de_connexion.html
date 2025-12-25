@@ -1,15 +1,22 @@
 <!doctype html>
-<html>
+<html lang="fr">
     <head>
         <meta charset ="utf-8" >
+        <link rel="stylesheet" type="text/css" href="interface_de_connexion.css">
         <title>Se connecter</title>
     </head>
     <body>
-
-        <form>
-            Mail: <input type="email" placeholder="prénom.nom@esen.tn">
-            <br>
-            <input type="submit" value="se connecter">
+        <form name="connexion" id="connexion">
+            <fieldset>
+                <legend>Connexion</legend>
+                <p>Mail:</p> <input type="email" placeholder="prénom.nom@esen.tn">
+                <br>
+                <p>Mot de passe:</p> <input type="password" placeholder="Mot de passe">
+                <br>
+                <input type="submit" value="se connecter">
+                <br>
+                <a href="interface_inscription.html">S'inscrire</a>
+            </fieldset>
         </form>
         
     </body>
