@@ -1,110 +1,150 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    body {
+        background-color: #ffffff;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        line-height: 1.5;
+    }
+    .contenu {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url("./img(1)(1).png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .header {
+        background-color: #d7dab3;
+        padding: 20px 20px;
+        border-radius: 8px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 10);
+    }
+    
+    .h-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+    .logo {
+        height: 60px; 
+        width: auto;  
+        display: block;
+    } 
+    .site-name {
+        font-size: 24px;
+        font-family: 'Laila', serif;
+        font-weight: 500;
+        line-height: 25px;
+        color: #000000;
+    }
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 40px 16px;
+        margin-top: 0;      
+        text-align: center;
+    }
+    .title {
+        font-size: 32px;
+        font-family: 'Laila', serif;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #4A6644;
+        text-shadow: 2px 2px 4px rgba(80, 57, 57, 0.5);
+    }
+    .subtitle {
+        font-size: 24px;
+        font-family: 'Laila', serif;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #000000;
+    }
+    
+    .btn {
+        display: inline-flex;
+        justify-content: center;
+        padding: 14px 24px;
+        background-color: #4A6644;
+        color: #FCEBF1;
+        font-size: 24px;
+        font-family: 'Laila', serif;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 10);
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: #a87777;
+        transform: translateY(-1px);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 10);
+    }
+    
+    .semester-btn {
+        padding: 16px 32px;
+        font-size: 20px;
+        font-family: 'Laila', serif;
+        width: 100%;
+    }
+    .semester-buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        gap: 16px;
+        margin-top: 42px;
+        width: 100%; 
+        max-width: 600px;
+    }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-}
+    @media (min-width: 640px) {
+    .semester-buttons {
+        flex-direction: row;
+        gap: 32px;
+    }
+    }
 
-#entete {
-    grid-column: 1 / -1;
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #ddd;
-}
+    .semester-dropdown {
+        position: relative;
+    }
 
-#entete img {
-    margin-right: 20px;
-    vertical-align: middle;
-}
+    .semester-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 8px;
+        padding: 8px 0;
+        list-style: none;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        min-width: 180px;
+    }
 
-nav {
-    grid-column: 1;
-    grid-row: 2;
-    background-color: #333;
-    padding: 20px;
-    overflow-y: auto;
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
+    .semester-dropdown:hover .semester-menu {
+        display: block;
+    }
 
-nav li {
-    margin-bottom: 15px;
-}
+    .semester-menu li a {
+        display: block;
+        padding: 8px 16px;
+        font-family: 'Laila', serif;
+        font-size: 18px;
+        color: #000;
+        text-decoration: none;
+    }
 
-nav summary {
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #555;
-    border-radius: 4px;
-}
-
-nav summary:hover {
-    background-color: #777;
-}
-
-nav details ul {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-nav a {
-    color: #ddd;
-    text-decoration: none;
-    display: block;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #555;
-}
-
-#contenu {
-    grid-column: 1;
-    grid-row: 3;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    align-content: start;
-}
-
-#contenu h1 {
-    grid-column: 1 / -1;
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-button a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
+    .semester-menu li a:hover {
+        background-color: #f2e0e0;
+    }
