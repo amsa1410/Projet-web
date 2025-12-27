@@ -1,23 +1,42 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="../css/interface_niveaux_etud.css">
-        <title>Niveaux d'étude</title>
-    </head>
-    <body>
-        <header id="entete">
-            <img src="..." alt="Logo " width="150" height="150">
-            <h1>......</h1>
-        </header>
-        
-        <div id ="contenu">
-            <h1>Bienvenue esenien</h1>
-            <button>S1</button>
-            
-            <button>S2</button>
-            
-        </div>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./interface_niveaux_etud.css">
+    <title>Niveaux d'étude</title>
+</head>
 
-    </body>
+<body>
+<div class="contenu">
+    <header class="header">
+        <div class="h-content">
+            <h1 class="site-name">Site name</h1>
+            <img src="./logo.png" alt="Logo site" class="logo">
+        </div>
+    </header>
+    
+    <main class="main-section">
+        <h2 class="title">WELCOME ESENien</h2>
+        <p class="subtitle">Choose:</p>
+
+        <div class="semester-buttons">
+            <div class="semester-dropdown">
+                <button class="btn semester-btn">Semestre 1</button>
+                <ul class="semester-menu">
+                    <li><a href="bc1_subjects.html">BC</a></li>
+                </ul>
+            </div>
+
+            <div class="semester-dropdown">
+                <button class="btn semester-btn">Semestre 2</button>
+                <ul class="semester-menu">
+                    <li><a href="bi_subjects.html">BI</a></li>
+                    <li><a href="bis_subjects.html">BIS</a></li>
+                    <li><a href="ebus_subjects.html">E-BUS</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
 </html>
