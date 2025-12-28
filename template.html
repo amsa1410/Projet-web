@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/template.css">
+    <title>Template</title>
+    <link rel="icon" type="image/png" href="../logo.png">
+</head>
+
+<body>
+<div class="contenu">
+    <div id="header">
+        <div class="h-content">
+            <h1 class="site-name">Site name</h1>
+            <a href="interface_niveaux_etud.html"><img src="../logo.png" alt="Logo site" class="logo"></a>
+        </div>
+    </div>
+  <aside>
+    <nav>
+        <div class="top-bar">
+            <div class="hamburger" onclick="toggleSidebar()">☰</div>
+        </div>
+        <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-panel">
+            <button class="menu-close" onclick="toggleSidebar()">✕</button>
+
+            <ul class="menu-list">
+            <li><a href="bc_subjects.html">BC L2</a></li>
+            <li><a href="bi_subjects.html">BI (L2)</a></li>
+            <li><a href="bis_subjects.html">BIS (L2)</a></li>
+            <li><a href="ebus_subjects.html">E_BUS (L2)</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+  </aside>
+    <script>
+    function toggleSidebar() {
+        const overlay = document.getElementById('menu-overlay');
+        overlay.classList.toggle('active');
+    }
+    </script>
+    </main>
+</div>
+</body>
+</html>
+
