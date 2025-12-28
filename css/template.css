@@ -6,6 +6,7 @@
         line-height: 1.5;
     }
     .contenu {
+        justify-content: center;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -44,15 +45,15 @@
     .main-section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: center; 
+        justify-content: flex-start;
         flex: 1;
         padding: 40px 16px;
-        margin-top: 0;      
+        margin-top: 0;
         text-align: center;
     }
-
     .title {
+        margin: 24px 0 8px 0;
         font-size: 32px;
         font-family: 'Laila', serif;
         font-weight: 700;
@@ -60,12 +61,18 @@
         color: #4A6644;
         text-shadow: 2px 2px 4px rgba(80, 57, 57, 0.5);
     }
+    
     .subtitle {
         font-size: 24px;
         font-family: 'Laila', serif;
         font-weight: 500;
         line-height: 1.2;
         color: #000000;
+    }
+    /*links style*/
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 /* Top floating bar */
     .top-bar {
@@ -94,16 +101,87 @@
         box-shadow: 0 6px 14px rgba(0,0,0,30);
     }
 
+
+/* Fullscreen dark/blur overlay */
+    .menu-overlay {
+        position: fixed;
+        inset: 0;                           /* top:0; right:0; bottom:0; left:0 */
+        display: none;                      /* hidden by default */
+        align-items: center;                /* center panel vertically */
+        justify-content: center;            /* center panel horizontally */
+        background: rgba(0, 0, 0, 0.35);    /* darken background */
+        backdrop-filter: blur(4px);         /* blur page behind */
+        z-index: 900;
+    }
+
+/* show when active (JS adds this class) */
+    .menu-overlay.active {
+        display: flex;
+    }
+
+/* inner panel */
+    .menu-panel {
+        background: #111;
+        border-radius: 20px;
+        padding: 32px 40px;
+        min-width: 260px;
+        max-width: 90vw;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+        position: relative;
+        text-align: center;
+    }
+
+/* close button (X) */
+    .menu-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        border: none;
+        background: #9FAA74;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+/* links list */
+    .menu-list {
+        list-style: none;
+        margin: 24px 0 0;
+        padding: 0;
+    }
+
+    .menu-list li {
+        margin: 14px 0;
+    }
+
+    .menu-list a {
+        font-family: 'Laila', serif;
+        font-size: 22px;
+        color: #c5c6ff;
+        text-decoration: none;
+    }
+
+    .menu-list a:hover {
+        color: #ffffff;
+    }
+
     /* Sidebar starts hidden */
     .sidebar {
+        position: fixed;              /* overlay on top of page */
+        top: 120px;                   /* align under header / near hamburger */
+        left: 16px;
         list-style: none;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-        padding: 16px 20px; 
+        padding: 16px 20px;
         background-color: #d7dab3;
         border-radius: 16px;
         max-width: 220px;
-        margin: 70px 0 0 20px;
-        display: none;   
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        display: none;                /* hidden by default */
+        margin: 0;                    /* remove gap */
+        z-index: 900;                 /* above content, below header if needed */
     }
 
 /* When active, show it */
